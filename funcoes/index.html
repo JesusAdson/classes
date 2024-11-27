@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+
+<body>
+    <label for="numero-1">Ano de nascimento</label>
+    <input id="numero-1" placeholder="Número 1">
+    <br />
+    <br />
+    <label for="numero-2">Número 2</label>
+    <input id="numero-2" placeholder="Número 2">
+    <br />
+    <br />
+    <button id="botao-somar" onclick="somar()">Somar</button>
+    <br />
+    <br />
+    <p>O resultado é: <span id="resultadoSoma"></span> </p>
+
+    <script>
+        function somar() {
+            const inputValor1 = document.getElementById("numero-1");
+            const inputValor2 = document.getElementById("numero-2");
+            const valor1 = parseFloat(inputValor1.value);
+            const valor2 = parseFloat(inputValor2.value);
+            const resultadoSoma = document.getElementById("resultadoSoma");
+            const soma = valor1 + valor2;
+            resultadoSoma.innerHTML = soma;
+        }
+    </script>
+</body>
+
+</html>
